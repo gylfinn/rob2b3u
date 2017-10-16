@@ -1,0 +1,15 @@
+Vika 1: Hugmyndasmiði 
+Vika 2:	Hugmyndasmiði
+Vika 3: Hönnun og uppsetning
+Vika 4: Hönnun og uppsetning
+Vika 5: Hönnun og uppsetning
+Vika 6: Hönnun og uppsetning
+Vika 7: kóðun og test
+Vika 8: kóðun og test
+Vika 9: kóðun og test
+Vika 10: kóðun og test
+Vika 11: kóðun og test
+Vika 12: kóðun og test
+Vika 13: Prófanir
+Vika 14: Prófanir
+Vika 15: Sýning
