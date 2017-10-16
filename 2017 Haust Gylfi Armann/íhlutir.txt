@@ -1,0 +1,13 @@
+1 Set x Acrylic Plate
+1 * Robot HATS
+1 * PCA9685 PWM Driver
+1 * TB6612 Motor Driver
+1 * 5-CH Line Follower Module
+1 * Ultrasonic Obstacle Avoidance Module
+1 * Light Follower Module
+2 * 18650 Battery Holder
+2 * DC Gear Motor
+1 * SunFounder SF0180 Servo
+4 * Hjól
+1 * USB Wi-Fi Adapter
+1 * Ribbon (30cm)
