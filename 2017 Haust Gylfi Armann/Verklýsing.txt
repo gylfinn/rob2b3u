@@ -1,0 +1,3 @@
+Nettur Raspberry Pi bíl sem notar ultrasonic til að forðast hættur sem eru á vegi hans. 
+Pæling að hafa ljósaelta líka sem myndi kannski kveikja á honum eða drepa á honum. 
+Síðan hafa línu follower til að láta hann fara eftir braut en myndi nota hitt til að forðast hluti á henni
