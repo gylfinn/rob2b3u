@@ -1,9 +1,12 @@
 while True:
-          i=GPIO.input(3)                         #Reading output of right IR sensor
-          j=GPIO.input(16)                        #Reading output of left IR sensor
-          if i==0:                                #Right IR sensor detects an object
-               print "Obstacle detected on Left",i
-               time.sleep(0.1)
-          elif j==0:                              #Left IR sensor detects an object
-               print "Obstacle detected on Right",j
-               time.sleep(0.1)
+          if ekkert fyrir
+		keyra afram
+	  if eitthvað fyrir hægri sensor
+		beygja til hægri
+          if eitthvað fyrir vinsti sensor
+		beygja til vinstri
+	  if linesensor.vinstri ser ekkert AND linesensor.hægri sér þá
+		beygja til hægri
+          if linesensor.hægri ser ekkert AND linesensor.vinstri sér þá
+		beygja til vinstri
+	

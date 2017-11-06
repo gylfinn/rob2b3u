@@ -5,19 +5,59 @@ GPIO.setup(5,GPIO.OUT)   #Left motor input A
 GPIO.setup(7,GPIO.OUT)   #Left motor input B
 GPIO.setup(11,GPIO.OUT)  #Right motor input A
 GPIO.setup(13,GPIO.OUT)  #Right motor input B
+GPIO.setup(2,IO.IN) #GPIO 2 -> Left IR out
+GPIO.setup(3,IO.IN) #GPIO 3 -> Right IR out
+GPIO.setup(4,IO.OUT) #GPIO 4 -> Motor 1 terminal A
+GPIO.setup(14,IO.OUT) #GPIO 14 -> Motor 1 terminal B
+GPIO.setup(17,IO.OUT) #GPIO 17 -> Motor Left terminal A
+GPIO.setup(18,IO.OUT) #GPIO 18 -> Motor Left terminal B
 GPIO.setwarnings(False)
 
 while True:
-        print "Rotating both motors in clockwise direction"
-        GPIO.output(5,1)
-        GPIO.output(7,0)
-        GPIO.output(11,1)
-        GPIO.output(13,0)
-        time.sleep(1)     #One second delay
+        if(GPIO.input(2)==True and GPIO.input(3)==True): #both while move forward     
+        	GPIO.output(4,True) #1A+
+        	GPIO.output(14,False) #1B-
+        	GPIO.output(17,True) #2A+
+        	GPIO.output(18,False) #2B-
+		print "Rotating both motors in clockwise direction"
+ 		i=GPIO.input(3)                         #Reading output of right IR sensor
+        	j=GPIO.input(16)                        #Reading output of left IR sensor
+        	GPIO.output(5,1)
+        	GPIO.output(7,0)
+        	GPIO.output(11,1)
+        	GPIO.output(13,0)
+        	time.sleep(1)     #One second delay
+		if i==0:                                #Right IR sensor detects an object
+               		print "Obstacle detected on Left",i
+               		time.sleep(0.1)
+        	elif j==0:                              #Left IR sensor detects an object
+               		print "Obstacle detected on Right",j
+               		time.sleep(0.1)
 
-        print "Rotating both motors in anticlockwise direction"
+    	elif(GPIO.input(2)==False and GPIO.input(3)==True): #turn right  
+        	GPIO.output(4,True) #1A+
+        	GPIO.output(14,True) #1B-
+
+        	GPIO.output(17,True) #2A+
+        	GPIO.output(18,False) #2B-
+
+    	elif(GPIO.input(2)==True and GPIO.input(3)==False): #turn left
+        	GPIO.output(4,True) #1A+
+        	GPIO.output(14,False) #1B-
+
+        	GPIO.output(17,True) #2A+
+        	GPIO.output(18,True) #2B-
+
+    	else:  #stay still
+        	GPIO.output(4,True) #1A+
+        	GPIO.output(14,True) #1B-
+
+        	GPIO.output(17,True) #2A+
+        	GPIO.output(18,True) #2B- 
+
+	print "Rotating both motors in anticlockwise direction"
         GPIO.output(5,0)
         GPIO.output(7,1)
         GPIO.output(11,0)
         GPIO.output(13,1)
-        time.sleep(1)     
+        time.sleep(1)    
