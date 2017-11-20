@@ -1,12 +1,14 @@
 while True:
-          if ekkert fyrir
-		keyra afram
-	  if eitthvað fyrir hægri sensor
-		beygja til hægri
-          if eitthvað fyrir vinsti sensor
-		beygja til vinstri
-	  if linesensor.vinstri ser ekkert AND linesensor.hægri sér þá
-		beygja til hægri
-          if linesensor.hægri ser ekkert AND linesensor.vinstri sér þá
-		beygja til vinstri
-	
+         Drive Forward()
+		if Right IR sensor detects an object
+			Turn Left
+		if Left IR sensor detects an object
+			Turn Right
+	Drive Forward()
+	if LineSensor detects nothing on Left
+		Turn Right
+	if Linesensor detects nothing on right
+		Turn Left
+	Drive Forward()
+	if drive.length > 10meter
+		Stop()
